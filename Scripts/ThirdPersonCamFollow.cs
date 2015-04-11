@@ -15,6 +15,10 @@ public class ThirdPersonCamFollow : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () 
 	{
-		transform.position = player.transform.position + offset;
+		//transform.position = player.transform.position + offset;
+		if (Input.GetKey ("q"))
+			transform.RotateAround (player.transform.position, Vector3.up, 100 * Time.deltaTime);
+		if (Input.GetKey ("e"))
+			transform.RotateAround (player.transform.position, Vector3.up, -100 * Time.deltaTime);
 	}
 }
