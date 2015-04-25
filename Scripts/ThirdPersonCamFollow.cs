@@ -7,6 +7,7 @@ public class ThirdPersonCamFollow : MonoBehaviour {
 	public float cameraDistance = 3.5f;
 	public float deadSpeed = 0.5f;
 	public float camFollow = 0.2f;
+	public float stillRotateSpeed = 100;
 	//public Camera ballCamera;
 	public GameObject playerContainer;
 	public GameObject player;
@@ -31,7 +32,8 @@ public class ThirdPersonCamFollow : MonoBehaviour {
 		}
 		else 
 		{
-			transform.RotateAround(player.transform.position, Vector3.up, Input.GetAxis("Horizontal") * Time.deltaTime * 100);
+			transform.RotateAround(player.transform.position, Vector3.up, 
+			                       Input.GetAxis("Horizontal") * Time.deltaTime * stillRotateSpeed);
 		}
 		transform.LookAt (player.transform);
 	}
