@@ -13,7 +13,7 @@ public class Tilt_Script : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		float torque = Mathf.Sin (Time.time) * multiplier;
+		float torque = Mathf.Cos (Time.time) * multiplier * Time.deltaTime * 75;
 		transform.Rotate(new Vector3(0, 0, torque));
 	}
 }
