@@ -8,7 +8,6 @@ public class ThirdPersonCamFollow : MonoBehaviour {
 	public float deadSpeed = 0.5f;
 	public float camFollow = 0.2f;
 	public float stillRotateSpeed = 100;
-	//public Camera ballCamera;
 	public GameObject playerContainer;
 	public GameObject player;
 
