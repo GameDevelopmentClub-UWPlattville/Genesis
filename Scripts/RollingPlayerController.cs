@@ -32,6 +32,7 @@ public class RollingPlayerController : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 		dragInitial = rb.drag;
 		angularDragInitial = rb.angularDrag;
+        GetComponent<ParticleSystem>().Stop();
 	}
 
 	//Pre Physics Calculation
