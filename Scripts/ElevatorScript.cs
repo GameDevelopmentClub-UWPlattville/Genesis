@@ -19,7 +19,7 @@ public class ElevatorScript : MonoBehaviour
 			if(GetComponent<Rigidbody> ().transform.position.y < top.transform.position.y)
 			{
 				GetComponent<Rigidbody> ().MovePosition(transform.position + new Vector3 (0, speed / 1000f, 0));
-				camera.transform.position = cameraLocation.transform.position;
+				//camera.transform.position = cameraLocation.transform.position;
 			}
 		}
 	}
